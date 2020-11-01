@@ -1,0 +1,39 @@
+{% extends "base.html"%}
+{% block base %}
+<div class="content">
+
+
+
+
+    <div class="card-header">
+        <div class="form-group pull-right" style="float: left;margin-bottom: 0px;">
+                <label>淘宝账号：</label>
+                <input class="form-control" id="nav-search-input" name="name" placeholder=" " style="display: inline-block;width: 200px"  type="text" value=""/>
+
+                <button class="btn btn-primary btn-search">
+                <span class="glyphicon glyphicon-search">查询</span>
+                </button>
+
+                </br>
+                </br>
+                </br>
+
+
+                <h4>待开发</h4>
+                <h6>线上验证使用自己淘宝账号，不知道自己userid时，可输入淘宝账号查询。还可考虑其他使用场景。</br>
+                </br>
+                    使用场景：
+                    </br>
+                    1、微信、手机号、QQ、微博注册会员后互通。测试时一个微信号可能要多绑定几次，此时可通过前端操作直接解绑微信账号。
+                    </br>
+                    2、或当某个操作有缓存时，也可通过前端直接清缓存。
+                    </br>
+                    3、主要方便查询，使用时不需要再去申请数据库权限。
+                </h6>
+        </div>
+
+    </div>
+
+
+</div>
+{% endblock %}

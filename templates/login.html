@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <!--<link href='https://htmlstream.com/preview/space-v1.5.0/assets/css/theme.css' rel='stylesheet' type='text/css'>-->
+        {%load static %}
+        <link href='{% static "css/theme.css"%}' rel='stylesheet' type='text/css'>
+        <link href='{% static "img/favicon.ico"%}' rel='shortcut icon'>
+        <title>登录</title>
+    </head>
+
+    <body>
+        <!--&lt;!&ndash;登录表单为post。若为get则密码会在url地址中显示出来&ndash;&gt;
+        <form action="/login/" method="post">
+            <p>账号: <input name="username" type="text" /></p>
+            <p>密码: <input name="password" type="password" /></p>
+
+            &lt;!&ndash;接口返回的参数在前端展示出&ndash;&gt;
+            {{ error }}<br>
+
+            &lt;!&ndash;post请求django中必须要传token，自动生成的，每次请求都会不一样&ndash;&gt;
+            {% csrf_token %}
+            <input type="submit" value="登录" />
+        </form>-->
+        <main id="content" role="main"  style="background-image: url(../static/img/11.jpeg);width:100%;height:100%">
+            <div class="gradient-overlay-half-dark-v3 bg-img-hero">
+                <div class="d-lg-flex align-items-lg-center height-85vh--lg">
+                    <div class="container space-2 space-0--lg mt-lg-8">
+                        <div class="row justify-content-lg-between align-items-lg-center">
+                            <div class="col-lg-5 mb-7 mb-lg-0">
+                                <!-- Title -->
+                                <span class="d-block text-white text-uppercase mb-2">@itest.info</span>
+                                <h1 class="display-4 font-size-48--md-down text-white mb-0">
+                                    Testing Management tools Platform</h1>
+                                <!-- End Title -->
+                            </div>
+
+                            <div class="col-lg-5">
+                                <!--登录表单-->
+                                <div class="bg-white shadow-sm rounded p-6">
+                                    <form action="/login/" class="js-validate" method="post" novalidate="novalidate">
+                                        <div class="mb-4">
+                                            <h2 class="h4">账号登录</h2>
+                                        </div>
+
+                                        <!-- 用户名 -->
+                                        <div class="js-form-message mb-3">
+                                            <div class="js-focus-state input-group input-group form">
+                                                <input aria-label="Enter your username" class="form-control form__input"
+                                                       name="username" placeholder="Enter your username"
+                                                       required="" type="text">
+                                            </div>
+                                        </div>
+
+                                        <!-- 密码 -->
+                                        <div class="js-form-message mb-3">
+                                            <div class="js-focus-state input-group input-group form">
+                                                <input aria-label="Enter your password" class="form-control form__input"
+                                                       name="password"
+                                                       placeholder="Enter your password" required=""
+                                                       type="password">
+                                            </div>
+                                        </div>
+
+                                        <p id="hint">{{ error }}</p>
+                                        <button class="btn btn-block btn-primary" type="submit">登录</button>
+                                        {% csrf_token %}
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+    </body>
+
+</html>

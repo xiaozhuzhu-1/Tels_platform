@@ -1,0 +1,79 @@
+<html>
+<head>
+    {%load static %}
+    <link href='{% static "css/perfect-scrollbar.css"%}' rel='stylesheet' type='text/css'>
+    <link href='{% static "css/theme-dark.min.css"%}' rel='stylesheet' type='text/css'>
+
+    <link href='{% static "img/favicon.ico"%}' rel='shortcut icon'>
+    <title>平台管理</title>
+</head>
+
+<body>
+
+<div class="container" data-layout="container">
+    <nav class="navbar navbar-vertical navbar-expand-xl navbar-light">
+
+        <!--左侧顶部图片和平台标题-->
+        <div class="d-flex align-items-center" style=width:1200px;>
+            <a class="navbar-brand">
+                <div class="d-flex align-items-center py-3"><img class="mr-2"
+                                                                 src="/static/img/22.png"
+                                                                 width="40"><span class="text-sans-serif">Testing Tool Platform</span>
+                </div>
+            </a>
+            <div class="divcss5"><a href="/logout/">退出</a></div>
+        </div>
+
+        <!--左侧导航栏-->
+        <div class="collapse navbar-collapse" id="navbarVerticalCollapse">
+            <div class="navbar-vertical-content perfect-scrollbar scrollbar" style="margin-top: 20px;">
+
+                <ul class="navbar-nav flex-column">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/project/">
+                        <span class="align-middle">手机统计</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/select/">
+                            <span class="align-middle">数据查询</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../chat.html">
+                            <span class="align-middle">用例管理</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../kanban.html">
+                            <span class="align-middle">任务管理</span>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../kanban.html">
+                            <span class="align-middle">Mock Server</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    {% block base %}
+
+    {% endblock %}
+    <div class="content">
+
+    </div>
+
+</div>
+</body>
+
+</html>
